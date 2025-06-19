@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* *************HEADEAR****************** */
+
+header {
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+
+header .logo-box {
+    float: left;
+    margin-top: 20px;
+}
+
+header .wrap .logo-box h1 a {
+    color: #eee;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+header .wrap .logo-box  p {
+    text-align: center;
+}
+
+header .wrap span {
+    color: #FF4F9D;
+}
+
+header .wrap p a {
+    color: #eee;
+}
+
+
+
+header .wrap .gnb-box {
+    line-height: 60px;
+    float: right;
+    margin-top: 20px;
+}
+
+
+header .wrap .gnb-box .gnb li {
+    display: inline-block;
+}
+
+header .wrap .gnb-box .gnb li a {
+    margin-right: 30px;
+    color: #eee;
+    font-size: 18px;
+}
+header .wrap .gnb-box .gnb li a:hover {
+    text-decoration: underline;
+}
+
+header .wrap .gnb-box .gnb li:last-child a {
+    padding: 10px 25px;
+    color: #5D5A88;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+}
