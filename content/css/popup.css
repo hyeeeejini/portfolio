@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* body,
+section {
+    height: auto;
+}
+ */
+
+/*  header {
+    background-color: rgba(0,0,0,0.6);
+ } */
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.popup-box {
+    /* margin-top: 100px; */
+    /* width: 100%; */
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+/* .popup-box > div {} */
+.popup-box .wrap {
+    width: 50%;
+    float: left;
+    position: relative;
+    /* .title 기준 */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.popup-box .wrap::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-box .going-box {
+    background-image: url(../img/01_1depth/puma.jpg);
+}
+
+.popup-box .coming-box {
+    background-image: url(../img/01_1depth/post.jpg);
+}
+
+/* .popup-box .coming-box::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+ */
+.popup-box .wrap .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+   /*  z-index: 99; */
+}
+
+.popup-box .wrap .title h2 {
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.popup-box .wrap .title p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.popup-box .wrap .btn {
+    border: 2px solid #eee;
+    border-radius: 50px;
+    
+
+    font-size: 16px;
+
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+
+    /* z-index: 99; */
+}
+
+.btn a {
+    padding: 10px 20px;
+    color: #eee;
+    display: block;
+}
+
+.popup-box .wrap .btn:hover {
+    background-color: #eee;
+}
+.popup-box .wrap .btn:hover a {
+    color: #444;
+}

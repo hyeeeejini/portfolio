@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+main {
+    width: 100%;
+    height: 100%;
+
+    background: url(../img/03_2depth_detail/style_nerdy/main-banner.jpg) no-repeat center/cover;
+
+    position: relative; /* 가상요소의 기준! */
+}
+main::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+
+    position: absolute;
+    left: 0;
+    top: 0
+}
+main .title-box {
+    text-transform: uppercase;
+    text-align: center;
+
+    position: relative;
+    top: 26%;
+
+    color: #fff;
+    font-weight: 700;
+    /* outline: 2px solid lime; */
+}
+main .title-box h1 {
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+main .title-box h2 {
+    font-size: 40px;
+}
+main .title-box h3 {
+    font-size: 36px;
+}
+
+/* main {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    background: url(../img/03_2depth_detail/style_nerdy/main-banner.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 1050px;
+
+    
+
+    position: relative;
+} */
+
+
+/* main::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+
+
+section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 100px auto 0;
+    color: #eee;
+    text-align: center;
+}
+
+section h3.sub-title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 200px;
+}
+
+/* article 공통 css */
+section article {
+    /* outline: 2px solid lime; */
+    margin-bottom: 120px;    
+}
+section article h4.hashtags {
+    font-size: 26px;
+    margin-bottom: 60px;
+}
+
+/* ************* article STORE ****************** */
+
+article.store {
+    /* width: calc(100% - 20px); */
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+
+    /* outline: 3px solid lime; */
+
+    position: relative;
+    /* .pager 기준, padding-right 부분에 pager 위치! */
+}
+
+article.store .content-box {
+    width: 100%;
+    /* height: 700px; */
+}
+article.store .content-box .fiximg-box {
+    width: 50%;
+    /* height: 100%; */
+    float: left;
+    /* outline: 3px solid red; */
+}
+article.store .content-box .fiximg-box img {
+    width: 100%;
+    /* height: 100%; */
+    display: block;
+}
+article.store .content-box .slide-box { /* 실제 보여지는 공간! */
+    width: 50%;
+    /* height: 100%; */
+    float: left;
+    overflow: hidden;
+    /* outline: 3px solid blue; */
+}
+article.store .content-box .slide-box .slide {
+    height: 300%;
+    position: relative; /* 움직이는 대상!!! */
+}
+article.store .content-box .slide-box .slide li {
+    height: 33.33%;
+}
+
+article.store .content-box .slide-box .slide li img {
+    display: block;
+    height: 100%;
+}
+
+
+article.store .pager {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+article.store .pager li~li {
+    color: #fff;
+}
+
+
+
+
+/* ************* article GOODS ****************** */
+
+.goods {
+    margin-bottom: 200px;
+}
+
+.goods .inner {
+    width: calc(100% - 20px);
+    max-width: 1400px;
+
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.goods .inner .slide-box {
+    display: flex;
+    width: 200%;
+}
+
+
+.goods .inner .slide {
+    width: 50%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.goods .inner .slide li {
+    width: 100%;
+}
+
+.goods .inner .slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.goods .pager span:last-child {
+    color: #444;
+}
+
+
+
+/* ************* article PHOTO-ZONE ****************** */
+
+.photo-zone {
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+
+.photo-box {
+    width: calc(100% - 20px);
+    max-width: 1400px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.photo-slide {
+    display: flex;
+    width: 200%;
+    margin-bottom: 50px;
+}
+
+.photo-slide li {
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.photo-slide li img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-slide li:nth-child(odd) img {
+    border: 5px dashed #8D72A9;
+    border-radius: 100px 0 100px 0;
+}
+
+.photo-slide li:nth-child(even) img {
+    border: 5px solid #8D72A9;
+    border-radius: 0 100px 0 100px;
+}
+
+
+.photo-pager {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-pager li {
+    width: 40px;
+    height: 4px;
+    background-color: #444;
+}
+
+.photo-pager li.active {
+    background-color: #eee;
+}
+
+
+
+/* ************* article PHOTO-GRAY ****************** */
+
+.photo-gray {
+    margin-bottom: 250px;
+    overflow: hidden;
+}
+
+.photo-gray .title {
+    margin: 100px 0 50px;
+    text-align: center;
+}
+
+.photo-gray .containar {
+    width: calc(100% - 20px);
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.photo-gray .limg {
+    float: left;
+    width: 50%;
+}
+
+.photo-gray .limg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-gray .inner {
+    float: right;
+    width: 50%;
+    height: 950px;
+}
+
+.photo-gray .inner .img-list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.photo-gray .inner .img-list li {
+    margin-bottom: 30px;
+}
+
+.photo-gray .inner .img-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* **************marquee************ */
+.marquee-wrap {  /* 보여지는 공간 */
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+
+    margin-bottom: 250px;
+}
+
+.marquee-wrap ul { /* 전체를 담는 부모 */
+    width: 150%;
+    position: relative;
+}
+.marquee-wrap ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.marquee-wrap ul li {
+    font-size: 68px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 3px;
+
+    width: 10%;
+    float: left;
+}
+.marquee-wrap ul li.purple {
+    color: #8D72A9;
+}
+
+
+
+/* ************* section LAST ****************** */
+
+.last {
+    width: 100%;
+
+    position: relative;
+    /* img 기준 */
+}
+
+.last img {
+    width: 65%;
+    max-width: 1400px;
+    display: block;
+
+    position: relative;
+    left: 10%;
+}
+
+.last .info {
+    color: #eee;
+    padding: 90px 150px;
+    border: 10px dashed #FF4F9D;
+    box-sizing: border-box;
+
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.last .info .des {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.last .info .des:last-child {
+    margin-bottom: 0;
+}
+
+.last .info .des .txt {
+    text-decoration: underline;
+}

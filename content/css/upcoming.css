@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+body {
+    height: auto;
+}
+
+section {
+    width: 100%;
+    margin: 150px 0 100px;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #FF4F9D;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+section h2.sub {
+    text-align: center;
+    font-size: 30px;
+    color: #eee;
+    letter-spacing: -0.8px;
+
+    margin-bottom: 100px;
+}
+
+.img-list {
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+    
+    overflow: hidden;
+}
+.img-list .post-wrap {
+    width: 200%; /* 보여지는 공간 기준, 3.5개씩 * 2세트!!! */
+    position: relative;
+
+    background-color: plum;
+}
+.img-list .post-wrap .post {
+    float: left;
+    width: 13.42%;
+}
+.img-list .post-wrap .post~.post {
+    margin-left: 1%;
+}
+
+.img-list .post .inner {
+    position: relative;  /* des 기준 */
+}
+.img-list .post .inner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+}
+
+.img-list .post img {
+    width: 100%;
+    display: block;
+}
+
+.img-list .post .des {
+    text-align: center;
+    color: #eee;
+    width: 100%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+.img-list .des h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.img-list .des p.title {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.img-list .des p:last-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.post:hover .inner::before {
+    display: block;
+}
+.post:hover img {
+    opacity: 0.2;
+}
+.post:hover .des {
+    display: inline-block;
+    z-index: 999;
+}

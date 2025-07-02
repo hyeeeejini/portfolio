@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+body {
+    height: auto;
+}
+
+section {
+    display: flex;
+    overflow: hidden;
+}
+section img {
+    display: block;
+}
+
+.main {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 50vw;
+    height: calc(100vh - 100px);
+}
+
+.main img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ********** content *********** */
+
+.content {
+    width: 50vw;
+    margin-left: 50vw;
+    padding-top: 100px; /* header 높이만큼 */
+}
+
+.content .title {
+    color: #eee;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+
+    padding: 20px 10px;
+
+    border: 10px double #FF4F9D;
+}
+
+.content .img img {
+    display: block;
+    width: 100%;
+}
+
+.content .des {
+    color: #eee;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.content .des h2 {
+    margin-bottom: 50px;
+    font-weight: 800;
+    border: 7px dashed #FF4F9D;
+    border-left: none;
+    border-right: none;
+    display: inline-block;
+    padding: 20px 40px;
+}
+
+.content .des .txt {
+    font-size: 24px;
+    margin-bottom: 200px;
+}
+
+
+
+/* ************info**************** */
+
+.content .info-box {
+    color: #eee;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+
+    position: relative;  /* info 기준 */
+}
+
+.content .info-box .store-img {
+    background: url(../img/03_2depth_detail/brand_ader/last_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 670px;
+}
+
+.content .info-box .store-img p {
+    opacity: 0;
+}
+
+
+.content .info-box .info {
+    position: absolute;
+    left: 40px;
+    top: -100px;
+
+    padding: 30px 70px;
+
+    border: 8px double #FF4F9D;
+    box-sizing: border-box;
+
+    z-index: 999;
+}
+
+.content .info-box .info div {
+    margin-bottom: 20px;
+}
+
+.content .info-box .info::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: -1;
+}

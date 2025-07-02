@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+body {
+    height: auto;
+}
+
+section.main-style {
+    font-family: "Noto Sans", sans-serif;
+    color: #eee;
+    text-align: center;
+    width: calc(100%-100px);
+    max-width: 1400px;
+    margin: 150px auto 0;
+}
+
+section h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+.main-style .nav {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* *****************tab************************** */
+.main-style .tab {
+    width: 100%; 
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.main-style .tab li {
+    float: left;
+    border: 2px solid #eee;
+    padding: 14px 295px;
+    box-sizing: border-box;
+}
+.main-style .tab li:first-child {
+    margin-right: 20px;
+}
+.main-style .tab li.style {
+    background-color: #eee;
+    color: #444;
+    font-weight: 800;
+
+    border-bottom: solid 6px #FF4F9D;
+}
+.main-style .tab li a {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* *****************menu************************** */
+
+.nav .menu {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.nav .menu li {
+    float: left;
+    width: 32%;
+    border: 2px solid #eee;
+    border-radius: 50px;
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    margin-right: 10px;
+}
+.nav .menu li:last-child {
+    margin-right: 0;
+}
+.nav .lnb {
+    margin: 20px 0 100px;
+}
+
+.nav .menu .cover {
+    background-color: #eee;
+    color: #444;
+    font-weight: 800;
+}
+
+/* *****************img************************** */
+
+.content > div {
+    width: 80%;
+    margin: 0 auto;
+}
+.content > div img {
+    margin-bottom: 80px;
+    border-radius: 200px 0 200px 0;
+    border: 8px dashed #FF4F9D;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.content h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content a {
+    font-size: 16px;
+}
+.content a:hover {
+    text-decoration: underline;
+}
+
+.content .des {
+    font-size: 20px;
+    padding: 30px 25px;
+    border: 3px solid #FF4F9D;
+    border-right: none;
+    border-left: none;
+    width: 70%;
+    margin: 50px auto 100px;
+}

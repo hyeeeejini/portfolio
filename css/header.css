@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* *************HEADEAR****************** */
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+
+    border-bottom: 1px solid rgba(238,238,238,0.5);
+}
+/* header 디자인 변경 -> on 클래스 추가 */
+header.on {
+    background-color: rgba(255,255,255,0.8);
+}
+header.on a {
+    color: #333 !important;
+}
+header.on .gnb-box .gnb li:last-child a {
+    border-color: #333;
+}
+/*****************************************/
+
+
+
+header .wrap {
+    height: 100%;
+}
+header .wrap  > div {
+    height: 100%;
+}
+
+
+header .logo-box {
+    float: left;
+    /* margin-top: 20px; */
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+header .logo-box h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+header .logo-box h1 a {
+    color: #eee;
+}
+header .logo-box h1 span {
+    color: #FF4F9D;
+}
+
+header .logo-box p {
+    font-size: 18px;
+    line-height: 1;
+}
+
+header .logo-box p a {
+    color: #eee;
+}
+
+
+
+header .gnb-box {
+    line-height: 60px;
+    float: right;
+    margin-top: 20px;
+}
+
+
+header .gnb-box .gnb li {
+    display: inline-block;
+}
+header .gnb-box .gnb li~li {
+    margin-left: 30px;
+}
+
+header .gnb-box .gnb li a {
+    color: #eee;
+    font-size: 18px;
+}
+
+header .gnb-box .gnb li:hover a {
+    text-decoration: underline;
+    color: #eee;
+}
+
+header .gnb-box .gnb li:last-child a {
+    padding: 10px 25px;
+    /* color: #5D5A88;
+    background-color: #d9d9d9; */
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+header .gnb-box .gnb li:last-child a:hover {
+    background-color: #fff;
+    color: #FF4F9D;
+    text-decoration: none;
+}

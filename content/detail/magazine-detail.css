@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+body {
+    height: auto;
+}
+
+section {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    /* max-width: 1400px; */
+
+    padding: 100px 0;
+    margin: 0 auto;
+}
+
+/* 타이틀 */
+section .title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 100px auto;
+    text-transform: uppercase;
+    color: #eee;
+
+    
+}
+section .title p {
+    border: 5px double #FF4F9D;
+    border-right: 0;
+    border-left: 0;
+    display: inline-block;
+    padding: 30px 50px;
+}
+
+/* 메인 이미지 */
+section .main {
+    margin-bottom: 250px;
+}
+
+section .main .img-box {
+    width: 100%;
+    height: 950px;
+    margin: 0 auto 100px;
+}
+
+section .main .img-box img {
+    width: 70%;
+    height: 100%;
+    display: block;
+    margin: 0 auto 100px;
+}
+
+section .main .des {
+    padding: 0 350px;
+}
+
+section .main .des p {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #eee;
+    margin-left: 10px;
+}
+
+section .hr {
+    margin-bottom: 250px;
+}
+
+/* ***************슬라이드배너********************** */
+section .middle-banner {
+    margin: 0 auto 200px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+section .middle-banner p {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 22px;
+    color: #eee;
+    padding: 0 350px;
+}
+
+section .middle-banner .slider {
+    /* overflow-x: auto; */
+    width: 50%;
+    margin: 40px auto;
+}
+
+.middle-banner .slider .slide-box {
+    display: flex;
+    gap: 20px;
+    width: 200%;
+    position: relative;
+    left: -300px;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: scroll;
+}
+
+.middle-banner .slider .slide-box img {
+    width: 33.33%;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    cursor: grab;
+}
+
+.middle-banner .slider .slide-box img:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+
+/* ************ 마퀴 효과 ***********************/
+section .marquee-wrap {
+    overflow: hidden;
+    background: rgba(255, 79, 157, 0.6);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    margin-bottom: 250px;
+}
+
+.marquee-wrap .marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll-left 5s linear infinite;
+    min-width: 100%;
+}
+
+.marquee-wrap .marquee-track .text {
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 8px;
+    padding-right: 50px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+
+/* **************** 이단 배너 ***************** */
+section .db-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto 300px;
+}
+
+.db-banner .db-img {
+    display: flex;
+    /* justify-content: center; */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.db-banner .db-img img {
+    width: 45%;
+    border-radius: 10px;
+    display: block;
+}
+
+.db-banner .txt p {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-top: 20px;
+    text-align: left;
+    white-space: pre-line;
+    color: #eee;
+}
+
+/* *********************************** 4단 배너 ******************************** */
+section .last-banner {
+    margin: 0 auto 250px;
+    width: 70%;
+}
+
+section .last-banner .top-img,
+section .last-banner .bottom-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+section .last-banner .top-img {
+    margin-bottom: 10px;
+}
+section .last-banner .top-img {
+    border-top: dashed 10px #FF4F9D;
+}
+
+section .last-banner .bottom-img {
+    border-bottom: dashed 10px  #FF4F9D;
+}
+
+section .last-banner img {
+    width: 45%;
+}
+
+/* ************************************* */
+section .value {
+    position: relative;
+}
+
+
+.value .last-hr {
+    width: 100%;
+}
+
+.value .last-hr p {
+    color: #eee;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.last-hr::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.last-hr::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer.page {
+    padding-left: 0;
+}
